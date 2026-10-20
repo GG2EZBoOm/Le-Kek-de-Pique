@@ -27,4 +27,5 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
 ## Mitwirkende
 
 Geräusche von Chips und Karten: ZapSplat – https://www.zapsplat.com
-(Die Geräusche sind fest ins Spiel eingebaut und dürfen nicht herausgelöst oder einzeln weitergegeben werden.)
+Radiomusik: AudioHero (https://www.audiohero.com) über ZapSplat – https://www.zapsplat.com
+(Geräusche und Musik sind fest ins Spiel eingebaut und dürfen nicht herausgelöst oder einzeln weitergegeben werden.)
