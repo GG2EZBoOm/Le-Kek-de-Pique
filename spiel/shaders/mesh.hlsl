@@ -56,38 +56,46 @@ static const float2 poisson[24] = {
     float2(0.751946, 0.453352), float2(0.078707, -0.715323), float2(-0.075838, -0.529344), float2(0.724479, -0.580798),
     float2(0.222999, -0.215125), float2(-0.467574, -0.405438), float2(-0.248268, -0.814753), float2(0.354411, -0.887570)};
 
-float linearizeShadow(float d, float n, float f) { return n * f / (f - d * (f - n)); }
+float linearizeShadow(float d, float n, float f, bool ortho) { return ortho ? n + d * (f - n) : n * f / (f - d * (f - n)); }
 
-float shadowFactor(int idx, float3 wpos, float3 N, float3 L, float2 screenPos, float lightSize) {
+float shadowFactor(int idx, float3 wpos, float3 N, float3 L, float2 screenPos, float lightSize, float biasTexels) {
     float4 params = shadowParams[idx];
+    bool ortho = params.z < 0;  // Richtungslicht
     float NoL = saturate(dot(N, L));
-    float3 biased = wpos + N * (0.004 + 0.01 * (1 - NoL));
+    float extra = 0;
+    if (biasTexels > 0) {
+        // Versatz in Texeln der Schattenkarte am Empfänger (für grobe Karten über große Flächen)
+        float4 sp0 = mul(shadowVP[idx], float4(wpos, 1));
+        float texelW = (ortho ? -2 * params.z : 2 * max(sp0.w, 0.01) * params.z) * params.w;
+        extra = texelW * biasTexels * (0.5 + 1.5 * (1 - NoL));
+    }
+    float3 biased = wpos + N * (0.004 + 0.01 * (1 - NoL) + extra);
     float4 sp = mul(shadowVP[idx], float4(biased, 1));
     if (sp.w <= 0) return 1;
     sp.xyz /= sp.w;
     float2 uv = sp.xy * float2(0.5, -0.5) + 0.5;
     if (any(uv < 0) || any(uv > 1)) return 1;
-    float zRecv = linearizeShadow(sp.z, params.x, params.y);
+    float zRecv = linearizeShadow(sp.z, params.x, params.y, ortho);
     float texel = params.w;
-    float frustumW = 2 * zRecv * params.z;
+    float frustumW = ortho ? -2 * params.z : 2 * zRecv * params.z;
 
     float ang = interleavedGradientNoise(screenPos + frameIndex * 7.0) * 6.2831;
     float2x2 rot = float2x2(cos(ang), -sin(ang), sin(ang), cos(ang));
 
     // Blocker-Suche
-    float searchUV = clamp(lightSize * 0.6 / frustumW, texel * 2, 0.05);
+    float searchUV = clamp(lightSize * (ortho ? 8.0 : 0.6) / frustumW, texel * 2, 0.05);
     float blockerSum = 0, blockers = 0;
     [unroll] for (int k = 0; k < 12; ++k) {
         float2 o = mul(rot, poisson[k * 2]) * searchUV;
         float d = texShadow.SampleLevel(sPoint, float3(uv + o, idx), 0);
         if (d < sp.z) {
-            blockerSum += linearizeShadow(d, params.x, params.y);
+            blockerSum += linearizeShadow(d, params.x, params.y, ortho);
             blockers += 1;
         }
     }
     if (blockers < 0.5) return 1;
     float zBlock = blockerSum / blockers;
-    float penumbra = lightSize * max(zRecv - zBlock, 0) / max(zBlock, 1e-3);
+    float penumbra = lightSize * max(zRecv - zBlock, 0) / (ortho ? 1.0 : max(zBlock, 1e-3));
     float radius = clamp(penumbra / frustumW, texel * 1.5, texel * 48);
     float sum = 0;
     [unroll] for (int j = 0; j < 24; ++j) {
@@ -135,13 +143,15 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
     s.rough = roughness;
     s.metal = metallic;
     s.ao = 1;
-    s.emissive = emissiveColor * emissive + glow.rgb;
+    // Leuchtbild (Neon, Nachtkulisse, Schild): nur das Bild leuchtet – kein gleichmäßiger Schleier über der Fläche
+    s.emissive = ((flags & F_EMISSIVEMAP) ? 0 : emissiveColor * emissive) + glow.rgb;
 
     float3 Ng = normalize(i.normal);
     if (!frontFace) Ng = -Ng;
     float3 T = normalize(i.tangent.xyz - Ng * dot(Ng, i.tangent.xyz));
     float3 B = cross(Ng, T) * i.tangent.w;
     float3 N = Ng;
+    float normalVar = 0;  // Rauheitszuschlag aus der Normal-Map (Toksvig)
 
     bool isCard = (flags & F_CARD) != 0;
     if (isCard) {
@@ -172,6 +182,8 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
         }
         if (flags & F_NORMAL) {
             float3 tn = texNormal.Sample(sAniso, auv).xyz * 2 - 1;
+            float tl = length(tn);
+            normalVar = saturate((1 - tl) / max(tl, 1e-3)) * normalStrength;
             tn.xy *= normalStrength;
             N = normalize(T * tn.x + B * tn.y + Ng * tn.z);
         }
@@ -188,7 +200,16 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
 
     float3 V = normalize(camPos - i.wpos);
     float NoV = max(dot(N, V), 1e-4);
-    float a = max(s.rough * s.rough, 0.002);
+    // Glanzlicht-Kantenglättung: ändert sich die Normale innerhalb eines Pixels stark (Lederporen, Kanten in der
+    // Ferne), wird das Glanzlicht breiter, statt bei kleinster Kamerabewegung weiß aufzublitzen
+    float3 dNx = ddx(N), dNy = ddy(N);
+    float specVar = min(0.5 * (dot(dNx, dNx) + dot(dNy, dNy)) + normalVar, 0.3);
+    float3 dGx = ddx(Ng), dGy = ddy(Ng);
+    float coatVar = min(0.5 * (dot(dGx, dGx) + dot(dGy, dGy)), 0.18);
+    float a0 = max(s.rough * s.rough, 0.002);
+    float a = sqrt(a0 * a0 + specVar);
+    const float coatA0 = 0.15 * 0.15;
+    float coatA = sqrt(coatA0 * coatA0 + coatVar);
     float3 F0 = lerp(0.08 * specular.xxx, s.albedo, s.metal);
     float3 diffColor = s.albedo * (1 - s.metal);
     bool skin = (flags & F_SKIN) != 0;
@@ -202,14 +223,17 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
         float3 L = Lv / dist;
         float att = saturate(1 - pow(dist / lt.range, 4));
         att = att * att / (dist * dist + 0.01);
-        if (lt.type == 1) {
+        if (lt.type == 2) {
+            L = -lt.dir;
+            att = 1;
+        } else if (lt.type == 1) {
             float cd = dot(-L, lt.dir);
             att *= smoothstep(lt.cosOuter, lt.cosInner, cd);
         }
         if (att <= 1e-5) continue;
         float NoLraw = dot(N, L);
         float sh = 1;
-        if (lt.shadowIndex >= 0 && (NoLraw > -0.3 || skin)) sh = shadowFactor(lt.shadowIndex, i.wpos, Ng, L, i.pos.xy, lt.size);
+        if (lt.shadowIndex >= 0 && (NoLraw > -0.3 || skin)) sh = shadowFactor(lt.shadowIndex, i.wpos, Ng, L, i.pos.xy, lt.size, lt.shadowBias);
         float3 radiance = lt.color * lt.intensity * att * sh;
         float NoL = saturate(NoLraw);
         float3 H = normalize(L + V);
@@ -242,10 +266,11 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
         }
         float3 c = radiance * (diff * diffTerm * (1 - F) + spec * NoL);
         if (clearcoat > 0) {
-            float Dc = D_GGX(NoH, 0.03 * 0.03 + 0.0025);
+            float NoLc = saturate(dot(Ng, L));
+            float Dc = D_GGX(saturate(dot(Ng, H)), coatA);
             float Fc = 0.04 + 0.96 * pow(1 - VoH, 5);
             float Vc = 0.25 / max(VoH * VoH, 1e-3);
-            c = c * (1 - Fc * clearcoat) + radiance * NoL * Dc * Vc * Fc * clearcoat;
+            c = c * (1 - Fc * clearcoat) + radiance * NoLc * Dc * Vc * Fc * clearcoat;
         }
         direct += c;
     }
@@ -270,6 +295,8 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
     if (felt) ambient += ambDiff * s.albedo * sheen * pow(1 - NoV, 3) * 0.5;
 
     float3 color = direct + ambient + s.emissive;
+    // Luftdunst im Freien: die Ferne verschwimmt zur Horizontfarbe
+    if (fogDensity > 0) color = lerp(color, fogColor, 1 - exp(-fogDensity * length(camPos - i.wpos)));
 
     if (flags & F_GLASS) {
         float fres = 0.04 + 0.96 * pow(1 - NoV, 5);

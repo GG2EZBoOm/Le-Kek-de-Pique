@@ -10,7 +10,7 @@ struct Light {
     float3 color;  float intensity;
     float3 dir;    float cosOuter;
     float cosInner; int type; int shadowIndex; float size;
-    float volumetric; float3 pad;
+    float volumetric; float shadowBias; float2 pad;
 };
 
 cbuffer FrameCB : register(b0) {

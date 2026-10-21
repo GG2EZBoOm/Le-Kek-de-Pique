@@ -41,6 +41,7 @@ POut VSMain(PIn i) {
         float att = saturate(1 - pow(dist / lt.range, 4));
         att = att * att / (dist * dist + 0.05);
         if (lt.type == 1) att *= smoothstep(lt.cosOuter, lt.cosInner, dot(-L, lt.dir));
+        if (lt.type == 2) att = 1;
         lit += lt.color * lt.intensity * att * 0.25;
     }
     o.light = lit;

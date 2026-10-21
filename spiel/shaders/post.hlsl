@@ -95,7 +95,7 @@ VolOut PSVolumetric(FSOut i) {
         float3 lightAcc = 0;
         [loop] for (int li = 0; li < lightCount; ++li) {
             Light lt = lights[li];
-            if (lt.volumetric <= 0) continue;
+            if (lt.volumetric <= 0 || lt.type == 2) continue;
             float3 Lv = lt.pos - p;
             float dl = length(Lv);
             float3 L = Lv / dl;
@@ -182,8 +182,27 @@ float3 downsample13(Texture2D t, float2 uv, float2 tx) {
     return r;
 }
 
+float3 karisW(float3 c, float w) { return c * (w / (1 + max(c.r, max(c.g, c.b)))); }
+float karisN(float3 c, float w) { return w / (1 + max(c.r, max(c.g, c.b))); }
+
 float4 PSBloomPrefilter(FSOut i) : SV_Target0 {
-    float3 c = downsample13(tex0, i.uv, texel);
+    float2 uv = i.uv, tx = texel;
+    float3 sum = 0;
+    float wsum = 0;
+    [unroll] for (int y = -2; y <= 2; y += 2)
+        [unroll] for (int x = -2; x <= 2; x += 2) {
+            float w = (x == 0 && y == 0) ? 0.125 : ((x == 0 || y == 0) ? 0.0625 : 0.03125);
+            float3 s = tex0.SampleLevel(sLinearClamp, uv + tx * float2(x, y), 0).rgb;
+            sum += karisW(s, w);
+            wsum += karisN(s, w);
+        }
+    [unroll] for (int k = 0; k < 4; ++k) {
+        float2 o = float2(k & 1 ? 1 : -1, k & 2 ? 1 : -1);
+        float3 s = tex0.SampleLevel(sLinearClamp, uv + tx * o, 0).rgb;
+        sum += karisW(s, 0.125);
+        wsum += karisN(s, 0.125);
+    }
+    float3 c = sum / max(wsum, 1e-4);
     c = min(c, 60.0);
     float br = max(c.r, max(c.g, c.b));
     float soft = clamp(br - bloomThreshold + bloomKnee, 0, 2 * bloomKnee);
