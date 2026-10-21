@@ -317,16 +317,18 @@ float4 PSComposite(FSOut i) : SV_Target0 {
     // Vignette
     float vig = 1 - vignette * smoothstep(0.15, 0.85, r2 * 2.2);
     col *= vig;
-    // Körnung
+    // Körnung im wahrgenommenen Helligkeitsraum (Wurzel ~ Gamma 2): das Ziel ist ein sRGB-Puffer, linear addiert würde das
+    // Korn in dunklen Stellen durch die Gammakurve um ein Vielfaches verstärkt (grelle Sprenkel auf Stühlen und Anzügen)
     float n = hash12(i.pos.xy + frac(time * 13.37) * 1000) - 0.5;
-    col += n * grain * (0.4 + 0.6 * (1 - l));
+    float3 pc = sqrt(max(col, 0)) + n * grain * (0.4 + 0.6 * (1 - l));
+    col = pc * max(pc, 0);
     // Letterbox (Kino-Kamera)
     float lb = letterbox * 0.12;
     if (uv.y < lb || uv.y > 1 - lb) col = 0;
     col *= 1 - fade;
-    // Dithering gegen Banding
-    col += (hash12(i.pos.xy * 1.7) - 0.5) / 255.0;
-    return float4(max(col, 0), 1);
+    // Dithering gegen Banding: eine halbe Stufe des 8-Bit-Ausgabewerts, ebenfalls im wahrgenommenen Raum
+    float3 dth = sqrt(max(col, 0)) + (hash12(i.pos.xy * 1.7) - 0.5) / 255.0;
+    return float4(dth * max(dth, 0), 1);
 }
 
 // Einfaches Kopieren (Skalierung)
