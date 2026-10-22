@@ -168,7 +168,28 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
     } else {
         float2 auv = (flags & F_UVRECT) ? uvRect.xy + frac(uv) * uvRect.zw : uv;
         if (flags & F_UVRECT) auv = uvRect.xy + saturate(i.uv) * uvRect.zw;
-        if (flags & F_ALBEDO) {
+        if (flags & F_TERRAIN) {
+            // Gelände: Gras von oben, Fels dreiseitig projiziert (kein Verziehen an Steilhängen).
+            // uv = absolute x/z der Landschaft, opos.y = absolute Höhe -> gleiche Koordinaten über alle Kacheln.
+            float3 No = normalize(mul(transpose((float3x3)world), Ng));  // Normale im Kachelraum
+            float2 py = uv;
+            float2 px = float2(uv.y, i.opos.y * uvScale.x * 0.11);
+            float2 pz = float2(uv.x, i.opos.y * uvScale.x * 0.11);
+            float3 bw = pow(abs(No), 4);
+            bw /= bw.x + bw.y + bw.z;
+            float3 rock = texAlbedo2.Sample(sAniso, px).rgb * bw.x + texAlbedo2.Sample(sAniso, py).rgb * bw.y +
+                          texAlbedo2.Sample(sAniso, pz).rgb * bw.z;
+            // großflächige Farbschwankung und waagerechte Gesteinsschichten, damit Felswände nicht einförmig grau wirken
+            float macro = texAlbedo2.Sample(sAniso, uv * 0.045 + 0.21).r * 1.6;
+            float strata = sin(i.opos.y * 2.3 + macro * 3.0) * 0.07;
+            rock *= 0.72 * (0.7 + 0.45 * macro) + strata;
+            float3 grass = texAlbedo.Sample(sAniso, uv).rgb * baseColor.rgb;
+            // Übergang nach Neigung, mit grobem Muster aufgelockert, damit keine Rasterkanten entstehen
+            float breakup = texAlbedo2.Sample(sAniso, uv * 0.13 + 0.37).g - 0.45;
+            float w = smoothstep(0.80, 0.64, No.y + breakup * 0.18);
+            s.albedo = tint.rgb * lerp(grass, rock, w);
+            s.rough = lerp(roughness, 0.78, w);
+        } else if (flags & F_ALBEDO) {
             float4 c = texAlbedo.Sample(sAniso, auv);
             s.albedo *= c.rgb;
             if (flags & F_EMISSIVEMAP) s.emissive += c.rgb * c.a * emissive * emissiveColor;
