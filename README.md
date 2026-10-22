@@ -28,4 +28,5 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
 
 Geräusche von Chips, Karten und Dampfzug: ZapSplat – https://www.zapsplat.com
 Radiomusik: AudioHero (https://www.audiohero.com) über ZapSplat – https://www.zapsplat.com
+Sender Kekwelle und Nachtschicht: Foureye, Kulluh, Dark Harmonics, Pioxonaq und ZapSplat – https://www.zapsplat.com
 (Geräusche und Musik sind fest ins Spiel eingebaut und dürfen nicht herausgelöst oder einzeln weitergegeben werden.)
