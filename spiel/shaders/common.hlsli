@@ -45,6 +45,7 @@ cbuffer FrameCB : register(b0) {
 #define F_ALPHATEST  4096
 #define F_ANISO      8192
 #define F_TRIPLANAR  16384
+#define F_TERRAIN    32768
 
 cbuffer ObjectCB : register(b1) {
     row_major float4x4 world;
