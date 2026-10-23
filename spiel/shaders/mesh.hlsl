@@ -229,6 +229,7 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
     float coatVar = min(0.5 * (dot(dGx, dGx) + dot(dGy, dGy)), 0.18);
     float a0 = max(s.rough * s.rough, 0.002);
     float a = sqrt(a0 * a0 + specVar);
+    float filteredRoughness = saturate(sqrt(a));
     const float coatA0 = 0.15 * 0.15;
     float coatA = sqrt(coatA0 * coatA0 + coatVar);
     float3 F0 = lerp(0.08 * specular.xxx, s.albedo, s.metal);
@@ -302,15 +303,17 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
     float3 envSpec = 0;
     if (!forEnv && !(flags & F_NOENV)) {
         ambDiff += texEnv.SampleLevel(sLinearClamp, N, envMaxMip - 1).rgb * envIntensity * 0.6;
-        envSpec = texEnv.SampleLevel(sLinearClamp, R, s.rough * (envMaxMip - 1)).rgb * envIntensity;
+        envSpec = texEnv.SampleLevel(sLinearClamp, R, filteredRoughness * (envMaxMip - 1)).rgb * envIntensity;
     } else {
         envSpec = lerp(ambientBottom, ambientTop, R.y * 0.5 + 0.5) * 0.5;
     }
-    float2 ab = envBRDFApprox(NoV, s.rough);
+    float2 ab = envBRDFApprox(NoV, filteredRoughness);
     float3 specAmb = envSpec * (F0 * ab.x + ab.y);
-    if (clearcoat > 0 && !forEnv) {
-        float Fc = 0.04 + 0.96 * pow(1 - NoV, 5);
-        specAmb += texEnv.SampleLevel(sLinearClamp, reflect(-V, Ng), 0.3).rgb * envIntensity * Fc * clearcoat;
+    if (clearcoat > 0 && !forEnv && !(flags & F_NOENV)) {
+        float coatNoV = saturate(dot(Ng, V));
+        float Fc = 0.04 + 0.96 * pow(1 - coatNoV, 5);
+        float coatMip = max(0.3, sqrt(coatA) * (envMaxMip - 1));
+        specAmb += texEnv.SampleLevel(sLinearClamp, reflect(-V, Ng), coatMip).rgb * envIntensity * Fc * clearcoat;
     }
     float3 ambient = ambDiff * diffColor * s.ao + specAmb * s.ao;
     if (felt) ambient += ambDiff * s.albedo * sheen * pow(1 - NoV, 3) * 0.5;
