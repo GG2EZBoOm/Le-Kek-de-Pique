@@ -8,6 +8,21 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 1. Oben auf **Code → Download ZIP** klicken und den Ordner `spiel` entpacken.
 2. `LeKekDePique.exe` starten (Windows 10/11, Grafikkarte mit Direct3D 11).
 
+## Neue Schauplätze
+
+- **Hindenburg:** Im Luftschiff-Salon geht die Pokerrunde während Brand, Sinkflug und Absturz weiter.
+- **Geisterbahn:** Eine Fahrt durch Friedhof, Krypta, Spinnenhöhle, Spuksalon, Hexenküche und Jahrmarkt-Finale.
+  Geister nähern sich dem Wagen, Skelette kommen aus Särgen und eine große Spinne lässt sich herunter.
+- **Weißeritztalbahn bei Nacht:** Zusätzlich zur Tagfahrt mit Disco-Pokerwagen.
+
+Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Mit den drei Original-Introvideos liegt der Download bei rund 173 MB;
+alle fünf Radiosender sind weiterhin in ihrer ursprünglichen Qualität enthalten.
+
+## Intros
+
+Beim Start laufen Kekish Games, das Engine-Intro und das Spielintro mit ihren Originaltonspuren.
+**Leertaste oder Esc** überspringt jeweils das laufende Video. Mit `--skip-intros` geht es direkt weiter.
+
 ## Updates
 
 Beim Start vergleicht das Spiel seine Dateien mit diesem Repo und lädt Neuerungen automatisch
