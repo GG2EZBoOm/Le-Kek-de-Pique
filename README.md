@@ -11,14 +11,18 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 ## Neue Schauplätze
 
 - **Hindenburg:** Im Luftschiff-Salon geht die Pokerrunde während Brand, Sinkflug und Absturz weiter.
+  Brennende Außenhaut, Rauch und seitlich abgelöste Hüllenteile; der Salon bleibt intakt.
 - **Geisterbahn:** Eine Fahrt durch Friedhof, Krypta, Spinnenhöhle, Spuksalon, Hexenküche und Jahrmarkt-Finale.
   Geister nähern sich dem Wagen, Skelette kommen aus Särgen und eine große Spinne lässt sich herunter.
 - **Weißeritztalbahn bei Nacht:** Zusätzlich zur Tagfahrt mit Disco-Pokerwagen.
+  In beiden Varianten begleitet der Schaffner endgültig ausgeschiedene Spieler zum Ausgang und kickt sie hinaus.
 - **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
-  tanzender Straßenparade, weiteren Trucks und Berliner Stadtkulisse. Nachtschicht liefert die Musik.
+  Passanten am Straßenrand, weiteren Trucks und Berliner Stadtkulisse. Synchron wechselnde RGB-Leisten
+  am inneren Tischrand und eine Nebelmaschine mit kurzen Ausstößen ergänzen das Licht.
+  Der eigene dreiminütige Synthwave-Track „Neon im Rückspiegel“ läuft auf Kek Sound System.
 
-Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Mit den drei Original-Introvideos liegt der Download bei rund 173 MB;
-alle fünf Radiosender sind weiterhin in ihrer ursprünglichen Qualität enthalten.
+Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Mit den drei Original-Introvideos liegt der Download bei rund 176 MB;
+die bisherigen fünf Radiosender sind unverändert enthalten, dazu kommt Kek Sound System (AAC 128 kbit/s).
 
 ## Intros
 

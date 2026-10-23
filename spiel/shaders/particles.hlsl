@@ -59,13 +59,20 @@ float4 PSMain(POut i) : SV_Target0 {
     float4 t = texSmoke.Sample(sLinear, i.uv);
     if (i.params.z > 0.5) {
         float h = 1 - i.uv.y;
-        float2 flow = float2(i.uv.x * 5, h * 6 - time * 3) + i.wpos.xz * 0.17;
-        float n = flameNoise(flow) * 0.65 + flameNoise(flow * 2.1) * 0.35;
-        float bend = sin(h * 9 - time * 5 + i.wpos.z) * h * 0.09;
-        float body = 1 - abs(i.uv.x - 0.5 + bend) / max(0.04, (1-h) * 0.43);
-        float heat = saturate(body * 0.8 + n * 0.65 - h * 0.6);
-        t.a = smoothstep(0.12, 0.43, heat) * smoothstep(0, 0.13, h) * (1-smoothstep(0.82, 1, h));
-        t.rgb = lerp(float3(1,0.035,0.002), float3(1,0.72,0.12), smoothstep(0.3,0.9,heat));
+        float2 flow = float2(i.uv.x * 4.8, h * 4.1 - time * 1.65) + i.wpos.xz * .37;
+        float curl = flameNoise(flow * .7 + 4.7) - .5;
+        flow.x += curl * (h + .25) * 2;
+        float n = flameNoise(flow) * .53 + flameNoise(flow * 2.07) * .29 + flameNoise(flow * 4.13) * .18;
+        float width = .46 * pow(1-h, .65);
+        float lateral = abs(i.uv.x - .5 + curl * h * .27);
+        float body = 1 - lateral / max(.015, width);
+        float heat = body * .64 + n * .72 - h * .64;
+        // Aufsteigende, ausgefranste Zungen mit dunkleren Rändern statt identischer Lichtkegel.
+        float fringe = smoothstep(.20, .36, heat);
+        t.a = fringe * smoothstep(0,.11,h) * (1-smoothstep(.84,1,h));
+        float core = smoothstep(.36,.83,heat) * (1-h*.5);
+        t.rgb = lerp(float3(.75,.045,.003),float3(1,.56,.055),core);
+        t.rgb = lerp(t.rgb,float3(1,.87,.42),smoothstep(.76,1,heat)*.8);
     }
     float sceneDepth = texDepth.Load(int3(i.pos.xy, 0));
     float soft = saturate((sceneDepth - i.depth) / max(i.params.x, 1e-3));
