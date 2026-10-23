@@ -14,6 +14,8 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 - **Geisterbahn:** Eine Fahrt durch Friedhof, Krypta, Spinnenhöhle, Spuksalon, Hexenküche und Jahrmarkt-Finale.
   Geister nähern sich dem Wagen, Skelette kommen aus Särgen und eine große Spinne lässt sich herunter.
 - **Weißeritztalbahn bei Nacht:** Zusätzlich zur Tagfahrt mit Disco-Pokerwagen.
+- **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
+  tanzender Straßenparade, weiteren Trucks und Berliner Stadtkulisse. Nachtschicht liefert die Musik.
 
 Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Mit den drei Original-Introvideos liegt der Download bei rund 173 MB;
 alle fünf Radiosender sind weiterhin in ihrer ursprünglichen Qualität enthalten.
