@@ -18,8 +18,16 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
   In beiden Varianten begleitet der Schaffner endgültig ausgeschiedene Spieler zum Ausgang und kickt sie hinaus.
 - **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
   Passanten am Straßenrand, weiteren Trucks und Berliner Stadtkulisse. Synchron wechselnde RGB-Leisten
-  am inneren Tischrand und eine Nebelmaschine mit kurzen Ausstößen ergänzen das Licht.
+  am inneren Tischrand und vier Nebelmaschinen an den Ecken ergänzen das Licht.
   Der eigene dreiminütige Synthwave-Track „Neon im Rückspiegel“ läuft auf Kek Sound System.
+- **Kekisch kolumbianisches Kartell:** Poolvilla mit Marmorsalon, Lounges, Küstenblick,
+  animierten erwachsenen Gästen und passender Dekoration an allen sechs Tischplätzen.
+
+Endgültig ausgeschiedene Spieler werden im Partyschuppen vom SEK abgeholt, starten beim Rave
+mit einem Raketenstuhl, verschwinden in der Geisterbahn im Dunkeln oder bekommen in der Villa
+Besuch vom Gangster. Ein verfügbarer Nachkauf wird vorher angeboten.
+Im Charaktereditor stehen jetzt 150 zusätzliche Gegenstände bereit: 90 direkt und 60 als
+Errungenschaftsbelohnung. Karten-Hover animiert die Figur auch für die Mitspieler.
 
 Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Mit den drei Original-Introvideos liegt der Download bei rund 176 MB;
 die bisherigen fünf Radiosender sind unverändert enthalten, dazu kommt Kek Sound System (AAC 128 kbit/s).
@@ -44,6 +52,13 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
 - **Übers Internet:** Port 47123 (TCP) im Router auf den Host-PC weiterleiten und die öffentliche
   IPv4-Adresse weitergeben – oder ein gemeinsames VPN (z. B. Radmin VPN) nutzen – oder den
   eigenständigen Server auf einem VPS laufen lassen: `LeKekServer.exe --port 47123`.
+- **Später Beitritt:** Im Modus Freies Spiel mit aktiviertem Nachkauf können neue Spieler
+  laufenden Partien beitreten. Der Einstieg erfolgt zur nächsten Hand auf einem freien oder KI-Platz.
+- **Wiedereinstieg:** Nach versehentlichem Verlassen oder Verbindungsabbruch bleiben eigener Platz,
+  Chips und Karten erhalten; die Verbindung wird automatisch erneut versucht. Der Server muss weiterlaufen.
+  Turniere bleiben für neue Teilnehmer nach dem Start geschlossen, Rückkehrer dürfen ihren Platz übernehmen.
+- **Gemeinsames Radio:** Jeder menschliche Spieler kann den Sender für die gesamte Runde umschalten.
+  Alle Teilnehmer benötigen die aktuelle Spielversion (Netzprotokoll 9).
 
 ## Mitwirkende
 
