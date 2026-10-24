@@ -34,6 +34,12 @@ Im Charaktereditor stehen jetzt 200 zusätzliche Gegenstände bereit: 90 direkt,
 Errungenschaftsbelohnung und 50 ausschließlich aus Truhen. Karten-Hover animiert die Figur
 auch für die Mitspieler.
 
+Die 200 zusätzlichen Ausrüstungsstücke wurden überarbeitet: plastische, geschlossene Formen,
+abgerundete Konturen, neue Tierfiguren und detailliertere Miniaturen. Brillen haben verbundene
+Fassungen, Gläser, Nasenauflagen und Bügel; Anhänger sitzen an Ketten aus einzelnen Gliedern.
+Stoff, Metall, Glas und farbige Figuren erhalten passende Oberflächen. Die Modelle werden
+direkt im Spiel erzeugt und benötigen keine zusätzlichen Texturpakete.
+
 Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Das kompakte Spielpaket enthält die drei Original-Introvideos;
 die bisherigen fünf Radiosender sind unverändert enthalten, dazu kommt Kek Sound System (AAC 128 kbit/s).
 
