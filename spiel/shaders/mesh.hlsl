@@ -33,6 +33,9 @@ struct VSOut {
 VSOut VSMain(VSIn i) {
     VSOut o;
     float4 wp = mul(world, float4(i.pos, 1));
+    if (flags & F_WATER) {
+        wp.y += .012 * sin(wp.x * 2.1 + time * 1.1) + .008 * sin(wp.z * 2.7 - time * 1.4);
+    }
     o.wpos = wp.xyz;
     o.pos = mul(viewProj, wp);
     o.normal = normalize(mul((float3x3)normalMat, i.normal));
@@ -203,6 +206,11 @@ float4 shade(VSOut i, bool frontFace, bool forEnv) {
         }
         if (flags & F_NORMAL) {
             float3 tn = texNormal.Sample(sAniso, auv).xyz * 2 - 1;
+            if (flags & F_WATER) {
+                float3 a = texNormal.Sample(sAniso, auv + time * float2(.018, .011)).xyz * 2 - 1;
+                float3 b = texNormal.Sample(sAniso, auv * 1.37 + time * float2(-.013, .016)).xyz * 2 - 1;
+                tn = normalize(float3((a.xy + b.xy) * .55, a.z * b.z));
+            }
             float tl = length(tn);
             normalVar = saturate((1 - tl) / max(tl, 1e-3)) * normalStrength;
             tn.xy *= normalStrength;
