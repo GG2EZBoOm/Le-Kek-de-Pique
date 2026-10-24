@@ -43,11 +43,15 @@ Nach mindestens einer beendeten Hand gibt es beim Verlassen des Tisches eine Fun
 die mit der aktiven Zeit am Tisch steigt. Eine Sitzung erhält genau einen Wurf; ein
 Verbindungsabbruch setzt die gesammelte Zeit nicht zurück. Truhen kosten nichts und benötigen
 keine Schlüssel. Im Hauptmenü unter **TRUHEN** stehen Inhalte, Chancen und Ausrüstungsvorschau.
-Der neue Tresor zeigt drei plastische 3D-Truhen mit Leder, Metallbeschlägen und beweglichen
-Verschlüssen. Beim Öffnen klappen die Scharnierdeckel auf; Licht, Partikel und eigene Klänge
-begleiten den Gewinn als großes 3D-Modell. Eine Galerie zeigt die möglichen Gegenstände
-als 3D-Miniaturen. **Leertaste, Esc oder Überspringen** kürzen die Animation ab; der Gewinn
-ist bereits gespeichert. Gegenstände lassen sich direkt an der eigenen Figur ansehen.
+Der Tresor zeigt drei plastische 3D-Truhen mit Leder, Metallbeschlägen und beweglichen
+Verschlüssen. Die neue Öffnungssequenz fährt mit der Kamera an die Truhe heran: Die
+Verschlüsse springen einzeln auf, der Scharnierdeckel federt nach und Licht strömt heraus.
+Eine Reihe echter 3D-Gegenstände bremst mit synchronen Klickgeräuschen bis zum Gewinn ab.
+Anschließend wird die Belohnung mit einer Drehung, Partikeln und eigenen Klängen groß
+enthüllt. Eine Galerie zeigt die möglichen Gegenstände als 3D-Miniaturen.
+**Leertaste, Esc oder Überspringen** kürzen die Animation ab; der Gewinn ist bereits
+gespeichert und wird beim Überspringen nicht erneut ausgewürfelt. Gegenstände lassen
+sich direkt an der eigenen Figur ansehen.
 
 - **Normal, episch und legendär:** insgesamt 50 exklusive Teile (25 Hüte, 10 Brillen, 15 Accessoires)
   oder Bankguthaben; doppelte Teile werden in Bankguthaben umgewandelt.
