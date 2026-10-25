@@ -10,6 +10,16 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 
 ## Neue Schauplätze
 
+Im Mehrtisch-Turnier können ausgeschiedene Zuschauer mit **TISCH WECHSELN** jeden laufenden Tisch
+auswählen. Die Liste zeigt Schauplatz, Spielerzahl und Hand; verdeckte Karten bleiben verborgen.
+Die Auswahl bleibt bei Wiederverbindung erhalten. Wird ein Tisch aufgelöst, folgt die Ansicht
+automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst entschieden.
+
+- **Die Pyramide:** Sandsteinkammer mit Fackeln, Reliefs und sechs goldverzierten Sarkophagen.
+  Gespielt wird direkt auf einem kantigen Sarkophagdeckel mit Pharaonenmotiv, ohne Filz oder Polsterbande.
+  Endgültig ausgeschiedene Figuren werden von einer bandagierten Mumie abgeholt; beide kehren
+  in den geöffneten Sarkophag zurück, bevor sich der Deckel schließt. Ein möglicher Nachkauf hat Vorrang.
+  Musik, Geräusche und Voice-Chat erhalten den Hall der steinernen Grabkammer.
 - **Hindenburg:** Im Luftschiff-Salon geht die Pokerrunde während Brand, Sinkflug und Absturz weiter.
   Brennende Außenhaut, Rauch und seitlich abgelöste Hüllenteile; der Salon bleibt intakt.
   Propeller laufen aus, die Crew reagiert auf den Absturz, Lampen schwingen und die Feuerwehr
@@ -17,6 +27,9 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 - **Geisterbahn:** Eine Fahrt durch Friedhof, Krypta, Spinnenhöhle, Spuksalon, Hexenküche und Jahrmarkt-Finale.
   Geister nähern sich dem Wagen, Skelette kommen aus Särgen und eine große Spinne lässt sich herunter.
 - **Weißeritztalbahn bei Nacht:** Zusätzlich zur Tagfahrt mit Disco-Pokerwagen.
+  Die Nachtfahrt analysiert Bass und Lautstärke der abgespielten Musik: gemeinsame, weich wechselnde
+  RGB-Farben, kurze weiße Strobe-Gruppen mit dunklen Pausen und vier Nebelmaschinen im Pokerwagen.
+  Die Lichtsteuerung folgt dem tatsächlich gehörten Ton und schaltet die Strobes bei Stille ab.
   In beiden Varianten begleitet der Schaffner endgültig ausgeschiedene Spieler zum Ausgang und kickt sie hinaus.
 - **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
   Passanten am Straßenrand, weiteren Trucks und Berliner Stadtkulisse. Synchron wechselnde RGB-Leisten
@@ -137,7 +150,7 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
   Chips und Karten erhalten; die Verbindung wird automatisch erneut versucht. Der Server muss weiterlaufen.
   Turniere bleiben für neue Teilnehmer nach dem Start geschlossen, Rückkehrer dürfen ihren Platz übernehmen.
 - **Gemeinsames Radio:** Jeder menschliche Spieler kann den Sender für die gesamte Runde umschalten.
-  Alle Teilnehmer benötigen die aktuelle Spielversion (Netzprotokoll 11).
+  Alle Teilnehmer benötigen die aktuelle Spielversion (Netzprotokoll 12).
 
 ## Mitwirkende
 
