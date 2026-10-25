@@ -30,6 +30,8 @@ automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst 
   Die Nachtfahrt analysiert Bass und Lautstärke der abgespielten Musik: gemeinsame, weich wechselnde
   RGB-Farben, kurze weiße Strobe-Gruppen mit dunklen Pausen und vier Nebelmaschinen im Pokerwagen.
   Die Lichtsteuerung folgt dem tatsächlich gehörten Ton und schaltet die Strobes bei Stille ab.
+  Unter **Optionen → Strobe-Lichter** kann jeder Spieler die Blitze nur für sich ausschalten;
+  die Einstellung wird gespeichert und wirkt sofort, auch im Multiplayer.
   In beiden Varianten begleitet der Schaffner endgültig ausgeschiedene Spieler zum Ausgang und kickt sie hinaus.
 - **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
   Passanten am Straßenrand, weiteren Trucks und Berliner Stadtkulisse. Synchron wechselnde RGB-Leisten
