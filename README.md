@@ -30,8 +30,8 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 Endgültig ausgeschiedene Spieler werden im Partyschuppen vom SEK abgeholt, starten beim Rave
 mit einem Raketenstuhl, verschwinden in der Geisterbahn im Dunkeln oder bekommen in der Villa
 Besuch vom Gangster. Ein verfügbarer Nachkauf wird vorher angeboten.
-Im Charaktereditor stehen jetzt 200 zusätzliche Gegenstände bereit: 90 direkt, 60 als
-Errungenschaftsbelohnung und 50 ausschließlich aus Truhen. Karten-Hover animiert die Figur
+Im Charaktereditor stehen jetzt 207 zusätzliche Gegenstände bereit: 90 direkt, 60 als
+Errungenschaftsbelohnung und 57 ausschließlich aus Truhen. Karten-Hover animiert die Figur
 auch für die Mitspieler.
 
 Die 200 zusätzlichen Ausrüstungsstücke wurden überarbeitet: plastische, geschlossene Formen,
@@ -59,8 +59,19 @@ enthüllt. Eine Galerie zeigt die möglichen Gegenstände als 3D-Miniaturen.
 gespeichert und wird beim Überspringen nicht erneut ausgewürfelt. Gegenstände lassen
 sich direkt an der eigenen Figur ansehen.
 
-- **Normal, episch und legendär:** insgesamt 50 exklusive Teile (25 Hüte, 10 Brillen, 15 Accessoires)
+- **Normal, episch und legendär:** insgesamt 57 exklusive Teile (27 Hüte, 11 Brillen, 19 Accessoires)
   oder Bankguthaben; doppelte Teile werden in Bankguthaben umgewandelt.
+- **Neue Funde:** Swag-Brille, Papiertüte und Strumpfmaske. Sehr selten gibt es Karambit,
+  Butterfly, Huntsman oder Shadow Daggers. Die ausgerüsteten Messer liegen auf dem Tisch;
+  die Figur nimmt sie gelegentlich für eine eigene Inspektion in die Hand. Das Butterfly
+  hat separat gelagerte Klinge und Griffe, die Shadow Daggers eine beidhändige Animation.
+  Geformte Klingenschliffe, feine Metallmuster, Griffstrukturen und Schrauben ergänzen die
+  neuen Modelle. Finger schließen sich beim Greifen; das Karambit wechselt für Drehungen
+  an den Ring. Die Oberflächen werden im Spiel erzeugt. Im Editor lässt
+  sich die Animation mit **MESSER ANSEHEN** starten.
+- **Messerchance je Öffnung:** normal 0,2 %, episch 0,6 %, legendär 1,5 %; die vier Arten
+  sind gleich wahrscheinlich. Diese Chance ist in der Ausrüstungsquote enthalten.
+  Doppelte Messer geben 12.000 $ Bankguthaben. Bestehende Gegenstände bleiben erhalten.
 - **Sechs-Spieler-Turniere:** Platz 1 erhält 50 %, Platz 2 erhält 30 % und Platz 3 erhält 20 %
   des Preisgeldpools. Freies Spiel behält seine normalen Tischchips ohne Turnierpreisgeld.
 
