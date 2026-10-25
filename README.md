@@ -15,6 +15,15 @@ auswählen. Die Liste zeigt Schauplatz, Spielerzahl und Hand; verdeckte Karten b
 Die Auswahl bleibt bei Wiederverbindung erhalten. Wird ein Tisch aufgelöst, folgt die Ansicht
 automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst entschieden.
 
+- **Sojus-Kapsel:** Poker in einer engen, gekrümmten Kabine mit weißer Polsterung, grüner Druckluke,
+  zwei kleinen Bullaugen, Doppelkonsole, Staupolstern und blauen technischen Sitzen.
+  Alle Tischfiguren tragen weiße Raumanzüge mit blauen Nähten, Druckanschlüssen und offener Helmhaube.
+  Ausgerüstete Hüte, Brillen, Ketten und weitere Accessoires bleiben über dem Anzug sichtbar;
+  beim Szenenwechsel kommt die ursprüngliche Kleidung zurück.
+  Die Kapsel fliegt vom Orbit durch den glühenden Wiedereintritt zum Fallschirmabstieg,
+  bremst kurz vor dem Boden und bleibt nach der Landung stehen. Flugphasen haben eigene Geräusche,
+  Instrumentanzeigen und dezente Bewegung. Ausgeschiedene Figuren werden durch die geöffnete
+  Luke hinausgezogen; ein verfügbarer Nachkauf hat Vorrang. Host und Gäste benötigen die aktuelle Version.
 - **Die Pyramide:** Sandsteinkammer mit Fackeln, Reliefs und sechs goldverzierten Sarkophagen.
   Gespielt wird direkt auf einem kantigen Sarkophagdeckel mit Pharaonenmotiv, ohne Filz oder Polsterbande.
   Endgültig ausgeschiedene Figuren werden von einer bandagierten Mumie abgeholt; beide kehren
