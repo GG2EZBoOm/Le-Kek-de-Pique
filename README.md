@@ -66,7 +66,9 @@ sich direkt an der eigenen Figur ansehen.
   die Figur nimmt sie gelegentlich für eine eigene Inspektion in die Hand. Das Butterfly
   hat separat gelagerte Klinge und Griffe, die Shadow Daggers eine beidhändige Animation.
   Geformte Klingenschliffe, feine Metallmuster, Griffstrukturen und Schrauben ergänzen die
-  neuen Modelle. Finger schließen sich beim Greifen; das Karambit wechselt für Drehungen
+  neuen Modelle. Das Butterfly hat einzeln bewegte Fingergelenke, Griffwechsel zwischen
+  Daumen und Zeigefinger, eine Rolle, eine aufgefächerte Inspektionspose und eine Fangbewegung.
+  Die Klinge passt beim Falten in die Griffe. Das Karambit wechselt für Drehungen
   an den Ring. Die Oberflächen werden im Spiel erzeugt. Im Editor lässt
   sich die Animation mit **MESSER ANSEHEN** starten.
 - **Messerchance je Öffnung:** normal 0,2 %, episch 0,6 %, legendär 1,5 %; die vier Arten
