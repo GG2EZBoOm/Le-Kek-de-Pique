@@ -34,6 +34,10 @@ Im Charaktereditor stehen jetzt 207 zusätzliche Gegenstände bereit: 90 direkt,
 Errungenschaftsbelohnung und 57 ausschließlich aus Truhen. Karten-Hover animiert die Figur
 auch für die Mitspieler.
 
+Eigene Emotes über **G** oder **1–8** animieren jetzt auch die eigene Figur. Laufende
+Karten- und Setzgesten werden zuerst beendet; danach startet das gewählte Emote.
+Mit **V** lässt sich die Figur in der Übersicht betrachten.
+
 Die 200 zusätzlichen Ausrüstungsstücke wurden überarbeitet: plastische, geschlossene Formen,
 abgerundete Konturen, neue Tierfiguren und detailliertere Miniaturen. Brillen haben verbundene
 Fassungen, Gläser, Nasenauflagen und Bügel; Anhänger sitzen an Ketten aus einzelnen Gliedern.
@@ -123,7 +127,7 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
   Chips und Karten erhalten; die Verbindung wird automatisch erneut versucht. Der Server muss weiterlaufen.
   Turniere bleiben für neue Teilnehmer nach dem Start geschlossen, Rückkehrer dürfen ihren Platz übernehmen.
 - **Gemeinsames Radio:** Jeder menschliche Spieler kann den Sender für die gesamte Runde umschalten.
-  Alle Teilnehmer benötigen die aktuelle Spielversion (Netzprotokoll 10).
+  Alle Teilnehmer benötigen die aktuelle Spielversion (Netzprotokoll 11).
 
 ## Mitwirkende
 
