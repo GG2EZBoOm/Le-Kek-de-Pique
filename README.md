@@ -30,13 +30,23 @@ Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 Endgültig ausgeschiedene Spieler werden im Partyschuppen vom SEK abgeholt, starten beim Rave
 mit einem Raketenstuhl, verschwinden in der Geisterbahn im Dunkeln oder bekommen in der Villa
 Besuch vom Gangster. Ein verfügbarer Nachkauf wird vorher angeboten.
-Im Charaktereditor stehen jetzt 207 zusätzliche Gegenstände bereit: 90 direkt, 60 als
-Errungenschaftsbelohnung und 57 ausschließlich aus Truhen. Karten-Hover animiert die Figur
+Im Charaktereditor stehen jetzt 208 zusätzliche Gegenstände bereit: 90 direkt, 60 als
+Errungenschaftsbelohnung und 58 ausschließlich aus Truhen. Karten-Hover animiert die Figur
 auch für die Mitspieler.
 
 Eigene Emotes über **G** oder **1–8** animieren jetzt auch die eigene Figur. Laufende
 Karten- und Setzgesten werden zuerst beendet; danach startet das gewählte Emote.
 Mit **V** lässt sich die Figur in der Übersicht betrachten.
+
+**D, SB und BB** zeigen die Tischpositionen dauerhaft an. Eigene gefoldete Karten bleiben
+bis zur nächsten Hand sichtbar; die mögliche Kombination wird mit dem Board aktualisiert.
+Wechselnde Turnierschauplätze wechseln nach der abgeschlossenen Hand und ihren Animationen,
+bevor am neuen Schauplatz die nächsten Karten ausgeteilt werden.
+
+Die **Kürbisbong · Halloween** ist ein exklusiver Fund aus epischen Truhen. Bei einem gewonnenen
+Pot pfeifen Mini-Lok und Dampflok-Orden mit Rauch; Radar, Propeller, Discokugel, UFO und weitere
+passende Teile reagieren mit kurzen Animationen. Doppelte Nebenpot-Gewinne lösen keinen zweiten
+Pfiff aus. Automatisches Chipspielen am Pier bleibt stumm; Menüs spielen keine Szenengeräusche ab.
 
 Die 200 zusätzlichen Ausrüstungsstücke wurden überarbeitet: plastische, geschlossene Formen,
 abgerundete Konturen, neue Tierfiguren und detailliertere Miniaturen. Brillen haben verbundene
@@ -63,7 +73,7 @@ enthüllt. Eine Galerie zeigt die möglichen Gegenstände als 3D-Miniaturen.
 gespeichert und wird beim Überspringen nicht erneut ausgewürfelt. Gegenstände lassen
 sich direkt an der eigenen Figur ansehen.
 
-- **Normal, episch und legendär:** insgesamt 57 exklusive Teile (27 Hüte, 11 Brillen, 19 Accessoires)
+- **Normal, episch und legendär:** insgesamt 58 exklusive Teile (27 Hüte, 11 Brillen, 20 Accessoires)
   oder Bankguthaben; doppelte Teile werden in Bankguthaben umgewandelt.
 - **Neue Funde:** Swag-Brille, Papiertüte und Strumpfmaske. Sehr selten gibt es Karambit,
   Butterfly, Huntsman oder Shadow Daggers. Die ausgerüsteten Messer liegen auf dem Tisch;
