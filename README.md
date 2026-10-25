@@ -104,6 +104,12 @@ Mit `LeKekDePique.exe --noupdate` lässt sich der Abgleich abschalten.
 
 ## Multiplayer
 
+- **Voraktionen:** Während andere Spieler dran sind, rechts unten Fold, Check oder Raise
+  mit einem genauen Gesamteinsatz vormerken. Auswahl erneut anklicken oder mit AUFHEBEN
+  löschen. Check bleibt kostenlos; ein inzwischen unzulässiger Raise wird verworfen.
+  Gilt jeweils für den nächsten Zug in derselben Setzrunde, im Einzel- und Mehrspieler.
+  Für die serverseitige Prüfung müssen Host und Mitspieler die aktuelle Version verwenden.
+
 - **Hosten:** Multiplayer → Hosten (Standard-Port 47123). Beim ersten Mal fragt die
   Windows-Firewall – dort „Zugriff zulassen“ wählen.
 - **Beitreten im selben Netz:** die angezeigte IPv4-Adresse eingeben, z. B. `192.168.178.20`
