@@ -3,6 +3,31 @@
 3D-Poker (Texas Hold'em No-Limit) mit eigener C++/Direct3D-11-Engine – Karriere, Sit & Go,
 Mehrtisch-Turniere, Multiplayer, Charakter-Editor und Errungenschaften.
 
+## Deutsch / English
+
+Im Hauptmenü oben rechts **ENGLISH** wählen oder **Optionen → Sprache / Language → English**.
+Die Auswahl wird lokal gespeichert. Menüs, Pokeranzeigen, Dialoge, Emotes, Gegenstände,
+Errungenschaften, Truhen und Szenenbeschriftungen sind übersetzt. Deutsch bleibt auswählbar.
+Englische Untertitel übersetzen die Texteinblendungen im originalen Spielintro.
+Die Sprache wird vom Hauptmenü aus gewechselt, bevor man an einem Tisch Platz nimmt.
+Multiplayer-Spieler können unterschiedliche Sprachen verwenden; Namen und Chat bleiben unverändert.
+
+**English quick start:** Download the ZIP with **Code → Download ZIP**, extract `spiel`,
+and run `LeKekDePique.exe` on Windows 10/11 with a Direct3D 11 graphics card.
+Select **ENGLISH** in the top-right corner of the main menu. Your preference is saved.
+Choose **Quick Game**, **Career**, **Tournaments**, or **Multiplayer**. Customize your avatar
+under **Your Character**, and open free reward crates under **Crates**.
+In multiplayer, host a game or connect to a host's address (default port 47123).
+Voice chat is configured under **Options → Voice-Chat**; the microphone starts off.
+Use **Space** to inspect your cards, hold the **right mouse button** to look around,
+**G** for emotes, **V** to change camera, and **Esc** for the menu.
+**Space / Esc** also skip intros and crate-opening animations.
+All human players can change the shared radio station. Strobe lights can be disabled locally.
+Late joining is available in Free Play with rebuys enabled; disconnected players can reclaim
+their seats while the server is running. Eliminated tournament spectators can switch tables.
+Game progress, equipment and chat are independent of language.
+The original game intro has English subtitles for its German title cards.
+
 ## Spielen
 
 1. Oben auf **Code → Download ZIP** klicken und den Ordner `spiel` entpacken.
