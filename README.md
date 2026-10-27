@@ -23,6 +23,8 @@ Use **Space** to inspect your cards, hold the **right mouse button** to look aro
 **G** for emotes, **V** to change camera, and **Esc** for the menu.
 **Space / Esc** also skip intros and crate-opening animations.
 All human players can change the shared radio station. Strobe lights can be disabled locally.
+Seven radio stations are included. New: **Neon Gridlines**, ten full-length electronic
+tracks with 26 minutes of music, encoded as stereo AAC at 128 kbit/s.
 Late joining is available in Free Play with rebuys enabled; disconnected players can reclaim
 their seats while the server is running. Eliminated tournament spectators can switch tables.
 Game progress, equipment and chat are independent of language.
@@ -116,7 +118,10 @@ Stoff, Metall, Glas und farbige Figuren erhalten passende Oberflächen. Die Mode
 direkt im Spiel erzeugt und benötigen keine zusätzlichen Texturpakete.
 
 Alle Szenen lassen sich im freien Spiel und in Turnieren auswählen. Das kompakte Spielpaket enthält die drei Original-Introvideos;
-die bisherigen fünf Radiosender sind unverändert enthalten, dazu kommt Kek Sound System (AAC 128 kbit/s).
+alle sieben Radiosender sind als Stereo-AAC mit 128 kbit/s enthalten.
+Neu: **Neon Gridlines** mit zehn vollständigen Electronic-Tracks und knapp 26 Minuten Musik.
+Den Sender unter **Optionen → Radio** oder direkt am Radio wählen; auch im Multiplayer verfügbar.
+Die sechs bisherigen Sender bleiben unverändert.
 
 ## Truhen und Preisgeld
 
