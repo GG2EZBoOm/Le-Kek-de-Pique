@@ -27,6 +27,10 @@ Late joining is available in Free Play with rebuys enabled; disconnected players
 their seats while the server is running. Eliminated tournament spectators can switch tables.
 Game progress, equipment and chat are independent of language.
 The original game intro has English subtitles for its German title cards.
+All 16 equippable items available from legendary crates now feature bespoke animated effects:
+orbiting stars, phoenix embers, moving wings, spinning propellers, shimmering gems and a miniature
+vault that opens. Rare knives retain their inspect animations with colored inlay and blade effects.
+Effects appear on equipped characters and in the animated crate previews, and react to winning a hand.
 
 ## Spielen
 
@@ -82,6 +86,14 @@ Besuch vom Gangster. Ein verfügbarer Nachkauf wird vorher angeboten.
 Im Charaktereditor stehen jetzt 208 zusätzliche Gegenstände bereit: 90 direkt, 60 als
 Errungenschaftsbelohnung und 58 ausschließlich aus Truhen. Karten-Hover animiert die Figur
 auch für die Mitspieler.
+
+Alle **16 ausrüstbaren Inhalte der legendären Truhe** einschließlich der vier seltenen Messer
+haben eigene Effekte und überarbeitete Materialien. Kosmos-Krone mit kreisenden Sternringen,
+Phönix mit beweglichen Feuerflügeln, Kristall-Palast mit schwebenden Prismen, Luftschiffe mit
+rotierenden Propellern und Dampf, Drachen mit Glutatem, Pfau mit beweglichen Schmuckfedern,
+Kartenfächer und ein sich öffnender Mini-Tresor. Brillen funkeln, Messer tragen farbige Energieadern
+und Klingenreflexe. Gewinne verstärken die Reaktionen; dieselben Modelle und Effekte sind in der
+Truhenvorschau und an den Figuren sichtbar. Die Effekte benötigen keine zusätzlichen Texturpakete.
 
 Eigene Emotes über **G** oder **1–8** animieren jetzt auch die eigene Figur. Laufende
 Karten- und Setzgesten werden zuerst beendet; danach startet das gewählte Emote.
