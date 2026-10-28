@@ -36,14 +36,17 @@ Effects appear on equipped characters and in the animated crate previews, and re
 
 ## Spieler-Stufen / Player levels
 
-100 Spieler-Stufen mit XP-Fortschrittsbalken im Hauptmenü und Meldungen beim Aufstieg.
+1000 Spieler-Stufen mit XP-Fortschrittsbalken im Hauptmenü und Meldungen beim Aufstieg.
 Abgeschlossene Hände geben 10 XP, gewonnene Pots 25 XP und Turniersiege 250 XP.
 Der Fortschritt wird gespeichert; ältere Spielstände erhalten XP für ihre gespeicherten Hände,
-Pots und Turniersiege. Höhere Stufen benötigen zunehmend mehr XP.
+Pots und Turniersiege. Jeder Aufstieg kostet 50 XP mehr als der vorherige:
+100 XP von Stufe 1 auf 2, dann 150 XP, 200 XP und so weiter bis Stufe 1000.
 
-100 player levels with an XP bar in the main menu and level-up notifications.
+1000 player levels with an XP bar in the main menu and level-up notifications.
 Earn 10 XP per completed hand, 25 XP per pot won and 250 XP per tournament win.
 Progress is saved; existing saves receive credit for recorded hands, pots and tournament wins.
+Each level-up costs 50 XP more than the previous one: 100 XP from level 1 to 2,
+then 150 XP, 200 XP and so on up to level 1000.
 
 ## Spielen
 
