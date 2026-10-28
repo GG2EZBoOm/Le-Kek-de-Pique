@@ -34,6 +34,17 @@ orbiting stars, phoenix embers, moving wings, spinning propellers, shimmering ge
 vault that opens. Rare knives retain their inspect animations with colored inlay and blade effects.
 Effects appear on equipped characters and in the animated crate previews, and react to winning a hand.
 
+## Spieler-Stufen / Player levels
+
+100 Spieler-Stufen mit XP-Fortschrittsbalken im Hauptmenü und Meldungen beim Aufstieg.
+Abgeschlossene Hände geben 10 XP, gewonnene Pots 25 XP und Turniersiege 250 XP.
+Der Fortschritt wird gespeichert; ältere Spielstände erhalten XP für ihre gespeicherten Hände,
+Pots und Turniersiege. Höhere Stufen benötigen zunehmend mehr XP.
+
+100 player levels with an XP bar in the main menu and level-up notifications.
+Earn 10 XP per completed hand, 25 XP per pot won and 250 XP per tournament win.
+Progress is saved; existing saves receive credit for recorded hands, pots and tournament wins.
+
 ## Spielen
 
 1. Oben auf **Code → Download ZIP** klicken und den Ordner `spiel` entpacken.
