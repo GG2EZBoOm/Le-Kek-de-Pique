@@ -92,9 +92,17 @@ automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst 
   die Einstellung wird gespeichert und wirkt sofort, auch im Multiplayer.
   In beiden Varianten begleitet der Schaffner endgültig ausgeschiedene Spieler zum Ausgang und kickt sie hinaus.
 - **Rave-Demo Berlin:** Poker auf dem Oberdeck eines fahrenden Sound-Trucks, mit DJ, Partylicht,
-  Passanten am Straßenrand, weiteren Trucks und Berliner Stadtkulisse. Synchron wechselnde RGB-Leisten
-  am inneren Tischrand und vier Nebelmaschinen an den Ecken ergänzen das Licht.
+  einer geschwungenen Straße und Begleittrucks, die dem Straßenverlauf folgen. Zuschauer bleiben
+  am Straßenrand, tanzen, jubeln und filmen mit dem Handy. Schaufenster, Cafés, Bushaltestellen,
+  Park, U-Bahn-Platz und Fahrräder sorgen für Abwechslung. Räder, Fahnen, Baumkronen und
+  Plattenteller bewegen sich; Lautsprechermembranen und Licht reagieren auf die Musik.
+  Schwenkende Scheinwerfer, synchron wechselnde RGB-Leisten am Tisch, Strobes und vier
+  Nebelmaschinen ergänzen die Bühne. Strobes lassen sich weiterhin lokal abschalten.
   Der eigene dreiminütige Synthwave-Track „Neon im Rückspiegel“ läuft auf Kek Sound System.
+- **Paketzentrum:** Die Halle ist rundum eingerichtet und beleuchtet. Hinter dem Tisch liegen
+  drei Verladetore, Packplätze und Paketstapel. Ein Gabelstapler mit Fahrer transportiert eine
+  Palette, hebt die Last an den Haltepunkten und trägt ein rotierendes Warnlicht; am Packtisch
+  arbeitet ein weiterer Mitarbeiter. Die bestehenden Förderbänder laufen weiter.
 - **Kekisch kolumbianisches Kartell:** Poolvilla mit Marmorsalon, Lounges, Küstenblick,
   animierten erwachsenen Gästen und passender Dekoration an allen sechs Tischplätzen.
   Kellner und Wache laufen durch freie Gänge; Brunnen, Poolwasser, Palmen und Vorhänge bewegen
