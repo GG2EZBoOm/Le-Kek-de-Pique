@@ -70,8 +70,13 @@ automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst 
   Ausgerüstete Hüte, Brillen, Ketten und weitere Accessoires bleiben über dem Anzug sichtbar;
   beim Szenenwechsel kommt die ursprüngliche Kleidung zurück.
   Die Kapsel fliegt vom Orbit durch den glühenden Wiedereintritt zum Fallschirmabstieg,
-  bremst kurz vor dem Boden und bleibt nach der Landung stehen. Flugphasen haben eigene Geräusche,
-  Instrumentanzeigen und dezente Bewegung. Ausgeschiedene Figuren werden durch die geöffnete
+  bremst kurz vor dem Boden und bleibt nach der Landung stehen. Zwei laufende Displays zeigen
+  Flugbahn, Höhe, Fluglage und Kabinendaten; analoge Zeiger und Statuslampen folgen der Flugphase.
+  Lüfter drehen sich, Gurte und Spiralkabel reagieren auf den Flug, Wolken ziehen außen vorbei.
+  Der Fallschirm entfaltet sich vollständig außerhalb der Kabine; nach der Landung treibt er
+  erst zur Seite und sinkt dann zu Boden. Ein Bergungswagen kommt an, öffnet seine Türen und
+  zwei Helfer gehen zur Kapsel. Flugphasen haben eigene Geräusche und dezente Bewegung.
+  Ausgeschiedene Figuren werden durch die geöffnete
   Luke hinausgezogen; ein verfügbarer Nachkauf hat Vorrang. Host und Gäste benötigen die aktuelle Version.
 - **Die Pyramide:** Sandsteinkammer mit Fackeln, Reliefs und sechs goldverzierten Sarkophagen.
   Gespielt wird direkt auf einem kantigen Sarkophagdeckel mit Pharaonenmotiv, ohne Filz oder Polsterbande.
