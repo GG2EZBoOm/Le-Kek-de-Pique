@@ -68,6 +68,12 @@ automatisch einem noch laufenden Tisch. Nur große Turniere erlauben keinen Nach
 Sit & Go erlaubt Bankroll-Einsatz und Nachkauf zum gleichen Buy-in; Nachkäufe erhöhen das Preisgeld.
 Eine Wiederverbindung übernimmt den bestehenden Spielstand; ausgeschiedene Spieler bleiben Zuschauer.
 
+- **Vasa:** Poker auf Holzfässern an Deck des schwedischen Kriegsschiffs von 1628. Drei Masten mit
+  verformten Segeln und flatternden Flaggen, Kanonen, Takelage, goldverzierter Heckaufbau und
+  ein umlaufender Stockholmer Hafen. Besatzung, Ruderboote, Steuerrad und Möwen sind animiert.
+  Auf die erste Böe folgen Schräglage, Wassereinbruch und ein dauerhafter Untergang;
+  unter Wasser steigen Blasen auf und Fische schwimmen am Schiff vorbei. Die Pokerpartie läuft weiter.
+  Wasser, Takelage, Holzknarren und die Schiffsglocke haben eigene Geräusche.
 - **Sojus-Kapsel:** Poker in einer engen, gekrümmten Kabine mit weißer Polsterung, grüner Druckluke,
   zwei kleinen Bullaugen, Doppelkonsole, Staupolstern und blauen technischen Sitzen.
   Alle Tischfiguren tragen weiße Raumanzüge mit blauen Nähten, Druckanschlüssen und offener Helmhaube.
