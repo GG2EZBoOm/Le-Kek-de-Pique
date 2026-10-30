@@ -26,7 +26,8 @@ All human players can change the shared radio station. Strobe lights can be disa
 Seven radio stations are included. New: **Neon Gridlines**, ten full-length electronic
 tracks with 26 minutes of music, encoded as stereo AAC at 128 kbit/s.
 Late joining is available in Free Play with rebuys enabled; disconnected players can reclaim
-their seats while the server is running. Eliminated tournament spectators can switch tables.
+their existing stacks while the server is running. Sit & Go and multi-table tournaments do not
+allow rebuys or re-entry. Eliminated players return as spectators and can switch tables.
 Game progress, equipment and chat are independent of language.
 The original game intro has English subtitles for its German title cards.
 All 16 equippable items available from legendary crates now feature bespoke animated effects:
@@ -62,7 +63,8 @@ The bonus is saved together with your XP progress.
 Im Mehrtisch-Turnier können ausgeschiedene Zuschauer mit **TISCH WECHSELN** jeden laufenden Tisch
 auswählen. Die Liste zeigt Schauplatz, Spielerzahl und Hand; verdeckte Karten bleiben verborgen.
 Die Auswahl bleibt bei Wiederverbindung erhalten. Wird ein Tisch aufgelöst, folgt die Ansicht
-automatisch einem noch laufenden Tisch. Ein offenes Nachkaufangebot wird zuerst entschieden.
+automatisch einem noch laufenden Tisch. Sit & Go und große Turniere erlauben keinen Nachkauf.
+Eine Wiederverbindung übernimmt den bestehenden Spielstand; ausgeschiedene Spieler bleiben Zuschauer.
 
 - **Sojus-Kapsel:** Poker in einer engen, gekrümmten Kabine mit weißer Polsterung, grüner Druckluke,
   zwei kleinen Bullaugen, Doppelkonsole, Staupolstern und blauen technischen Sitzen.
