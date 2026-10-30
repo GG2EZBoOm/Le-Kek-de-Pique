@@ -9,7 +9,7 @@ struct PIn {
     float3 pos : POSITION;
     float2 uv : TEXCOORD0;
     float4 color : COLOR;
-    float4 params : TEXCOORD1;  // x = weich-Bereich, y = Lichtanteil, z = Flamme, w = additiv
+    float4 params : TEXCOORD1;  // x = weich-Bereich, y = Lichtanteil, z = 0 Rauch / 1 Flamme / 2 Blase, w = additiv
 };
 
 struct POut {
@@ -57,7 +57,20 @@ float flameNoise(float2 p) {
 
 float4 PSMain(POut i) : SV_Target0 {
     float4 t = texSmoke.Sample(sLinear, i.uv);
-    if (i.params.z > 0.5) {
+    if (i.params.z > 1.5) {
+        // Air/water boundary: mostly transparent centre, curved rim and two small reflections.
+        float2 q = i.uv * 2 - 1;
+        float r2 = dot(q,q);
+        clip(1-r2);
+        float z = sqrt(max(0,1-r2));
+        float rim = pow(1-z,3);
+        float glint = exp(-dot(q-float2(-.30,-.40),q-float2(-.30,-.40))*95);
+        float lower = exp(-dot(q-float2(.26,.57),q-float2(.26,.57))*135);
+        float edge = 1-smoothstep(.94,1,r2);
+        t.rgb = lerp(float3(.17,.37,.40),float3(.71,.91,.96),rim*.8);
+        t.rgb += glint*.85+lower*.24;
+        t.a = (.035+rim*.60+glint*.65+lower*.22)*edge;
+    } else if (i.params.z > 0.5) {
         float h = 1 - i.uv.y;
         float2 flow = float2(i.uv.x * 4.8, h * 4.1 - time * 1.65) + i.wpos.xz * .37;
         float curl = flameNoise(flow * .7 + 4.7) - .5;

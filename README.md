@@ -73,6 +73,10 @@ Eine Wiederverbindung übernimmt den bestehenden Spielstand; ausgeschiedene Spie
   ein umlaufender Stockholmer Hafen. Besatzung, Ruderboote, Steuerrad und Möwen sind animiert.
   Auf die erste Böe folgen Schräglage, Wassereinbruch und ein dauerhafter Untergang;
   unter Wasser steigen Blasen auf und Fische schwimmen am Schiff vorbei. Die Pokerpartie läuft weiter.
+  Figuren atmen versetzte Luftblasen aus. Wer endgültig ausscheidet, erschlafft nach einem letzten
+  Luftschwall und treibt zur Oberfläche; ein Nachkaufangebot hat Vorrang. Die Besatzung wird nach dem
+  Untergang einzeln von Haien und Kraken ergriffen und in die Tiefe gezogen, mit bewegten Kiefern,
+  Schwanzflossen, sich windenden Armen, Saugnäpfen, Blasenspuren und Unterwassergeräuschen.
   Wasser, Takelage, Holzknarren und die Schiffsglocke haben eigene Geräusche.
 - **Sojus-Kapsel:** Poker in einer engen, gekrümmten Kabine mit weißer Polsterung, grüner Druckluke,
   zwei kleinen Bullaugen, Doppelkonsole, Staupolstern und blauen technischen Sitzen.
