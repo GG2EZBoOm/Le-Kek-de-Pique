@@ -1,0 +1,24 @@
+{
+  "issue": 1,
+  "date": "2026-11-01",
+  "de": [
+    {
+      "title": "Neu im Hauptmenü",
+      "body": "Nach jedem Update liegen die Patchnotes hier für dich bereit. Du kannst sie auch offline auf Deutsch oder Englisch lesen."
+    },
+    {
+      "title": "Rückblick · Vasa",
+      "body": "Der Patch vom 31. Oktober schließt die Lücke am Bug. Die Bordwände reichen jetzt bis zur Spitze."
+    }
+  ],
+  "en": [
+    {
+      "title": "New on the menu",
+      "body": "Find the latest patch notes here after each update. Your copy is always available offline, in English and German."
+    },
+    {
+      "title": "Looking back · Vasa",
+      "body": "The October 31 patch closed the gap at the bow. The bulwarks now run all the way to the tip."
+    }
+  ]
+}
