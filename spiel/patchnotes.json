@@ -1,7 +1,11 @@
 {
-  "issue": 4,
+  "issue": 5,
   "date": "2026-11-03",
   "de": [
+    {
+      "title": "Das Heckkastell der Vasa",
+      "body": "Der Rumpf läuft zum Ruder hin schmal zu. Zwei Decks steigen zum Heckkastell an, seitlich kragen geschnitzte Galerien aus. Voraus ragt das Galion unter den Bugspriet. Über dem Achterdeck bewegt sich das dreieckige Besansegel."
+    },
     {
       "title": "Dein Auftrag am Tisch",
       "body": "Hefte ein Ziel an und sieh deinen Fortschritt beim Spielen. Eine unbegonnene Tagesaufgabe kannst du nach einer Vorschau einmal täglich tauschen."
@@ -12,6 +16,10 @@
     }
   ],
   "en": [
+    {
+      "title": "Vasa’s sterncastle",
+      "body": "The hull narrows towards the rudder. Two decks rise to the sterncastle, with carved galleries projecting from both quarters. The open beakhead extends beneath the bowsprit, and a triangular lateen sail moves above the quarterdeck."
+    },
     {
       "title": "Your mission at the table",
       "body": "Pin a goal to see progress as you play. Once a day, preview a replacement and swap a daily mission you haven’t started."
