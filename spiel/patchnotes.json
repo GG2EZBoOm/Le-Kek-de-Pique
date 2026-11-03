@@ -1,24 +1,24 @@
 {
-  "issue": 1,
-  "date": "2026-11-01",
+  "issue": 2,
+  "date": "2026-11-03",
   "de": [
     {
-      "title": "Neu im Hauptmenü",
-      "body": "Nach jedem Update liegen die Patchnotes hier für dich bereit. Du kannst sie auch offline auf Deutsch oder Englisch lesen."
+      "title": "Missionen am Pokertisch",
+      "body": "Zwei Tages- und zwei Wochenmissionen warten im Hauptmenü. Jede Aufgabe hat ein Motiv aus den Karten und Chips vom Pokertisch."
     },
     {
-      "title": "Rückblick · Vasa",
-      "body": "Der Patch vom 31. Oktober schließt die Lücke am Bug. Die Bordwände reichen jetzt bis zur Spitze."
+      "title": "Direkt auf die Bankroll",
+      "body": "Erfüllte Aufgaben zahlen sofort aus. Neue Tagesmissionen gibt es um Mitternacht, neue Wochenmissionen am Montag."
     }
   ],
   "en": [
     {
-      "title": "New on the menu",
-      "body": "Find the latest patch notes here after each update. Your copy is always available offline, in English and German."
+      "title": "Missions at the table",
+      "body": "Find two daily and two weekly missions in the main menu. Each one features artwork made with cards and chips from the poker table."
     },
     {
-      "title": "Looking back · Vasa",
-      "body": "The October 31 patch closed the gap at the bow. The bulwarks now run all the way to the tip."
+      "title": "Straight to your bankroll",
+      "body": "Completed missions pay out immediately. Daily missions refresh at midnight. Weekly missions refresh on Monday."
     }
   ]
 }
