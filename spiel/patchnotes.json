@@ -1,24 +1,24 @@
 {
-  "issue": 3,
+  "issue": 4,
   "date": "2026-11-03",
   "de": [
     {
-      "title": "20 Missionsarten",
-      "body": "Checken, Flops sehen oder am Button spielen? Die Tagesaufgaben wechseln zwischen zehn Zielen. Für die Woche gibt es zehn eigene, vom Schauplatzwechsel bis zum Turnierpodest."
+      "title": "Dein Auftrag am Tisch",
+      "body": "Hefte ein Ziel an und sieh deinen Fortschritt beim Spielen. Eine unbegonnene Tagesaufgabe kannst du nach einer Vorschau einmal täglich tauschen."
     },
     {
-      "title": "XP für deine Stufe",
-      "body": "Jede neu erfüllte Mission gibt Geld und Stufen-XP. Beide Beträge stehen auf der Karte. Bereits angefangene Aufgaben kannst du bis zum nächsten Wechsel beenden."
+      "title": "Stempel und Showdowns",
+      "body": "Sammle Stempel für Uwe, Graf River und Ramses. Schafft ihr am Multiplayer-Tisch zehn gemeinsame Showdowns, gibt es für alle Beteiligten 300 $ und 60 XP."
     }
   ],
   "en": [
     {
-      "title": "20 mission types",
-      "body": "Check, see a flop or play on the button. Daily missions rotate through ten goals. Weekly missions have their own ten, from touring venues to a tournament podium finish."
+      "title": "Your mission at the table",
+      "body": "Pin a goal to see progress as you play. Once a day, preview a replacement and swap a daily mission you haven’t started."
     },
     {
-      "title": "XP for your level",
-      "body": "Every mission you complete now pays cash and level XP. Both rewards are shown on the card. Missions already underway stay yours until the next reset."
+      "title": "Stamps and showdowns",
+      "body": "Collect stamps for Uwe, Count River and Ramses. Reach ten showdowns together at a multiplayer table and every participant earns $300 and 60 XP."
     }
   ]
 }
